@@ -16,6 +16,10 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Create isolated Python environment
+        run: |
+          python -m venv .venv
+          echo "$PWD/.venv/bin" >> "$GITHUB_PATH"
       - run: pip install -r requirements-test.txt
       - run: python -m compileall -q custom_components/halarm
       - run: node --check custom_components/halarm/frontend/halarm.js
