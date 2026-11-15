@@ -1,5 +1,12 @@
 # Ændringslog
 
+## 0.9.2 beta
+
+- Nyt lyst interface tættere på ESPScripts og ESPHealth: hvidlige flader, diskrete kanter og kompakte alarmkort.
+- Direkte adgang til Tilføj alarm og Opdater lyde samt oversigt over næste vækning, aktive alarmer og lydfiler.
+- Gul bruges som afdæmpet accent; systemets mørke udseende ændrer ikke længere HAlarm til mørk visning.
+- Alarmmotor, stemmestop, lagerformat og gemte alarmindstillinger er uændrede.
+
 ## 0.9.1 beta
 
 - Stemmestop efter bekræftet afspilning stopper straks ved pause/slukning, også under de første sekunder og ved lydens slutning.

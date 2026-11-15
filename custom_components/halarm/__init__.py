@@ -669,8 +669,8 @@ async def async_setup(hass: HomeAssistant, config: ConfigType) -> bool:
         await panel_custom.async_register_panel(
             hass, webcomponent_name="halarm-app", frontend_url_path=DOMAIN,
             sidebar_title="HAlarm", sidebar_icon="mdi:alarm-multiple",
-            module_url="/halarm-ui/halarm.js?v=0.9.1",
+            module_url="/halarm-ui/halarm.js?v=0.9.2",
             require_admin=True,
         )
-    _LOGGER.info("HAlarm 0.9.1 beta klar")
+    _LOGGER.info("HAlarm 0.9.2 beta klar")
     return True

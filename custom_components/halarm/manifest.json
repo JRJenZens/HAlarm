@@ -1,7 +1,7 @@
 {
   "domain": "halarm",
   "name": "HAlarm",
-  "version": "0.9.1",
+  "version": "0.9.2",
   "documentation": "https://github.com/JRJenZens/HAlarm",
   "dependencies": [
     "http",

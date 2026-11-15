@@ -2,7 +2,7 @@
 
 **HAlarm** er en lokal, selvstændig Home Assistant alarmcentral til Google Cast højttalere (Nest Hub, Nest Audio og Nest Mini) med et roligt, varmt gult interface, inspireret af det enkle ESPHealth-dashboard.
 
-> **Status: 0.9.1 beta.** Google Cast eksponerer ikke en dedikeret begivenhed for »Hey Google, stop«. HAlarm udleder et stop fra ændringer i `media_player` tilstanden. Stoplogikken er regressionstestet mod Home Assistant 2026.11.1; fysisk stemmestop på Nest-enheder skal fortsat afprøves i din installation.
+> **Status: 0.9.2 beta.** Google Cast eksponerer ikke en dedikeret begivenhed for »Hey Google, stop«. HAlarm udleder et stop fra ændringer i `media_player` tilstanden. Stoplogikken er regressionstestet mod Home Assistant 2026.11.1; fysisk stemmestop på Nest-enheder skal fortsat afprøves i din installation.
 
 ## Funktioner
 
@@ -12,7 +12,7 @@
 - Automatisk MP3 registrering i `halarm/sounds/`
 - Lydprøve, stopknap, »stop alle«, test og separat status på aktive alarmer
 - Gentagelse ved naturlig `idle`-afslutning; `off` og `paused` stopper altid, også tæt på lydens slutning
-- Kompakt statusoversigt, mobilvisning, mørk visning og dæmpet gul accent
+- Kompakt statusoversigt, mobilvisning, fast lys visning og dæmpet gul accent
 - Vedvarende lydmappe uden for integrationsmappen, så HACS-opdateringer bevarer MP3-filer
 - Log over de seneste tilstandsskift for at hjælpe med fejlsøgning på Nest Mini
 - Forsøger automatisk at importere alarmer fra Alarmcentral 2.x (`.storage/alarmpanel.v2`)

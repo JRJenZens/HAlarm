@@ -1,4 +1,4 @@
-# Validering af HAlarm 0.9.1 beta
+# Validering af HAlarm 0.9.2 beta
 
 ## Miljø
 
@@ -13,7 +13,7 @@
 - Gem/genindlæs af eksisterende alarmindstillinger; læsende migration fra Alarmcentral.
 - Persistente MP3-filer og spejling til Cast/mediebibliotek.
 - Samme planlagte minut starter kun én gang ved samtidige scheduler-kald.
-- Desktop 1280 px, mobil 390 px, mørk visning, redigering/gem, Escape og genåbning uden dobbelte lyttere.
+- Desktop 1280 px, mobil 390 px, lys visning også med mørkt systemtema, redigering/gem, Escape og genåbning uden dobbelte lyttere.
 - Rigtig HA-opstart med afhængigheder, registrering af WebSocket og sidepanel.
 - HACS-validering i GitHub Actions; brands-check undtages, da dette er et brugerdefineret repository.
 - Ingen JavaScript-fejl eller vandret overløb ved testet mobilbredde.
