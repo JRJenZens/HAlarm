@@ -1,0 +1,20 @@
+{
+  "domain": "halarm",
+  "name": "HAlarm",
+  "version": "0.9.1",
+  "documentation": "https://github.com/JRJenZens/HAlarm",
+  "dependencies": [
+    "http",
+    "frontend",
+    "panel_custom",
+    "websocket_api",
+    "media_source"
+  ],
+  "requirements": [],
+  "codeowners": [
+    "@JRJenZens"
+  ],
+  "iot_class": "local_push",
+  "issue_tracker": "https://github.com/JRJenZens/HAlarm/issues",
+  "integration_type": "service"
+}

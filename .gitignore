@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+.venv/
+.env
+/config/
+.storage/
+custom_components/halarm/sounds/*.mp3
+!custom_components/halarm/sounds/.gitkeep
+
+.ha-venv/
+.test-config/
+artifacts/
