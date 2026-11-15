@@ -2,12 +2,13 @@
 import asyncio
 from pathlib import Path
 import tempfile
-import sys
+import logging
 from homeassistant.core import HomeAssistant
 from homeassistant.setup import async_setup_component
 from homeassistant import loader, bootstrap
 
 async def main():
+    logging.basicConfig(level=logging.INFO)
     with tempfile.TemporaryDirectory() as directory:
         component=Path(directory)/'custom_components';component.mkdir()
         (component/'halarm').symlink_to(Path(__file__).resolve().parents[1]/'custom_components/halarm',target_is_directory=True)
@@ -16,7 +17,8 @@ async def main():
         try:
             async with asyncio.timeout(50):
                 ok=await bootstrap.async_from_config_dict({'halarm':{},'http':{'server_host':'127.0.0.1','server_port':18124}},hass)
-                assert ok,'HAlarm failed setup'
+                assert ok,'HA bootstrap failed'
+                assert await async_setup_component(hass,'halarm',{'halarm':{}}),'HAlarm failed setup'
                 assert 'halarm' in hass.data
                 assert 'halarm' in hass.data['frontend_panels']
                 assert Path(directory,'halarm','sounds').is_dir()
