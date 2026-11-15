@@ -42,8 +42,9 @@ async def main():
         assert await page.get_by_role('button',name='Gem alarm',exact=True).is_visible()
         await page.keyboard.press('Escape')
         await page.emulate_media(color_scheme='dark')
+        assert await page.evaluate("getComputedStyle(document.querySelector('halarm-app').shadowRoot.querySelector('.page')).backgroundColor") == 'rgb(245, 247, 248)'
         await page.screenshot(path=str(out/'preview-dark.png'),full_page=True)
         assert not errors,errors
-        print('Browser OK: desktop, mobile, dark mode, editing, save, Escape, reconnect; no JS errors')
+        print('Browser OK: desktop, mobile, light design with dark system theme, editing, save, Escape, reconnect; no JS errors')
         await browser.close()
 asyncio.run(main())
