@@ -85,6 +85,7 @@ Python 3.14 og Home Assistant 2026.11.1 bruges til integrationstests. JavaScript
 python -m venv .venv
 .venv/bin/pip install -r requirements-test.txt
 .venv/bin/python -m unittest discover -s tests -v
+PYTHONPATH=. .venv/bin/python tests/runtime_check.py
 .venv/bin/python -m playwright install chromium
 .venv/bin/python tests/browser_check.py
 ```

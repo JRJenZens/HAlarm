@@ -23,3 +23,13 @@ jobs:
       - run: PYTHONPATH=. python tests/runtime_check.py
       - run: python -m playwright install --with-deps chromium
       - run: python tests/browser_check.py
+  hacs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate custom HACS repository
+        uses: hacs/action@1ebf01c408f29afcb6406bd431bc98fd8cbb15aa
+        with:
+          category: integration
+          # Brands registration is for inclusion in the default catalogue.
+          ignore: brands

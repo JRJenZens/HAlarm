@@ -14,6 +14,8 @@
 - Persistente MP3-filer og spejling til Cast/mediebibliotek.
 - Samme planlagte minut starter kun én gang ved samtidige scheduler-kald.
 - Desktop 1280 px, mobil 390 px, mørk visning, redigering/gem, Escape og genåbning uden dobbelte lyttere.
+- Rigtig HA-opstart med afhængigheder, registrering af WebSocket og sidepanel.
+- HACS-validering i GitHub Actions; brands-check undtages, da dette er et brugerdefineret repository.
 - Ingen JavaScript-fejl eller vandret overløb ved testet mobilbredde.
 
 Tests bruger syntetiske alarmer, ikke brugerens gemte data. Ingen fysisk Nest
